@@ -22,9 +22,9 @@ public class WhisperService {
     public WhisperService() {
         // 初始化OkHttpClient，并设置超时时间
         this.client = new OkHttpClient.Builder()
-                .connectTimeout(60, TimeUnit.SECONDS)  // 连接超时时间
-                .writeTimeout(60, TimeUnit.SECONDS)   // 写入超时时间
-                .readTimeout(120, TimeUnit.SECONDS)   // 读取超时时间
+                .connectTimeout(60*10, TimeUnit.SECONDS)  // 连接超时时间
+                .writeTimeout(60*10, TimeUnit.SECONDS)   // 写入超时时间
+                .readTimeout(60*10, TimeUnit.SECONDS)   // 读取超时时间
                 .build();
     }
 
